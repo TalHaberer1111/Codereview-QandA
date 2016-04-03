@@ -1,1 +1,24 @@
-{{yield}}
+{{#if newQuestionForm}}
+<div class="new-question">
+  <h2>QUESTION ANYONE?</h2>
+  <h4>whatever is on your mind!</h4>
+  <form>
+    <div class="form-group">
+      <label for="content">The question:</label>
+      {{input class="form-control" value=content id="content"}}
+    </div>
+    <div class="form-group">
+      <label for="author"> name:</label>
+      {{input class="form-control" value=author id="author"}}
+    </div>
+    <div class="form-group">
+      <label for="notes">Any fun notes:</label>
+      {{input class="form-control" value=notes id="notes"}}
+    </div>
+    <button type="button" class="btn btn-success" {{action 'saveQuestion' question}}>Ask Away!</button>
+    <button type="button" class="btn btn-warning" {{action 'newQuestionFormHide'}}>Nevermind</button>
+  </form>
+</div>
+{{else}}
+  <button type="button" class="btn btn-primary" {{action 'newQuestionFormShow'}}>Ask a Question!</button>
+{{/if}}

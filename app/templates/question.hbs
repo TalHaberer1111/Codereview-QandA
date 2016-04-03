@@ -1,1 +1,12 @@
-{{outlet}}
+<div class="col-md-8 col-md-offset-2 body-col">
+  <h1>{{model.content}}</h1>
+  <h3>{{model.author}}</h3>
+  <p><strong>{{model.date}}</strong></p>
+  <p>{{model.notes}}</p>
+  <hr>
+  {{edit-question question=model updateQuestion="updateQuestion"}}
+  <hr>
+  {{#each model.answer as |answer|}}
+    {{answer-tile answer=answer}}
+  {{/each}}
+</div>
