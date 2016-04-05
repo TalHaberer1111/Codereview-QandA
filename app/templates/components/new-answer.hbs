@@ -1,4 +1,6 @@
 {{#if newAnswerForm}}
+<div class="new-answer">
+
 <form>
   <div class="form-group">
     {{input value=question id="question"}}
@@ -13,8 +15,8 @@
   </div>
   <button {{action 'saveAnswer'}}>Answer</button>
 </form>
+</div>
 
 {{else}}
-<button {{action 'showNewAnswerForm'}}>New answer</button>
-
+<button {{action 'showAddAnswerForm'}}>New answer</button>
 {{/if}}
