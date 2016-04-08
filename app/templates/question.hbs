@@ -5,6 +5,7 @@
   <p>{{model.notes}}</p>
   <hr>
   {{edit-question question=model updateQuestion="updateQuestion"}}
+    <button type="button" class="btn btn-danger" {{action 'deleteQuestion'}}>Delete</button>
   <hr>
   {{#each model.answers as |answer|}}
     {{answer-tile answer=answer}}
