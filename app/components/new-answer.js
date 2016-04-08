@@ -8,12 +8,11 @@ export default Ember.Component.extend({
     },
     saveAnswer() {
     var params = {
-      question: this.get('question'),
       author: this.get('author'),
       content: this.get('content')
     };
-    this.sendAction('saveAnswer', params);
     this.set('addAnswerForm', false);
+    this.sendAction('saveAnswer', params);
   }
 }
 });

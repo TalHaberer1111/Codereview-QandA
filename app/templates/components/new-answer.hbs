@@ -1,19 +1,18 @@
-{{#if newAnswerForm}}
+{{#if addAnswerForm}}
+<h1>Question Response</h1>
 <div class="new-answer">
 
 <form>
   <div class="form-group">
-    {{input value=question id="question"}}
-  </div>
-
-  <div class="form-group">
+    <label for="author">Author:</label>
     {{input value=author id="author"}}
   </div>
 
   <div class="form-group">
+    <label for="content">Response:</label>
     {{input value=content id="content"}}
   </div>
-  <button {{action 'saveAnswer'}}>Answer</button>
+  <button {{action 'saveAnswer'}}>Submit Answer</button>
 </form>
 </div>
 
