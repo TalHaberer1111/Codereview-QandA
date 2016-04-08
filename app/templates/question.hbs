@@ -3,12 +3,16 @@
   <h3>{{model.author}}</h3>
   <p><strong>{{model.date}}</strong></p>
   <p>{{model.notes}}</p>
-  <hr>
+  <!-- <hr> -->
   {{edit-question question=model updateQuestion="updateQuestion"}}
     <button type="button" class="btn btn-danger" {{action 'deleteQuestion'}}>Delete</button>
-  <hr>
-  {{#each model.answers as |answer|}}
+  <!-- <hr> -->
+  <h1>Answer Vault</h1>
+  <div class="answer-results">
+    {{#each model.answers as |answer|}}
     {{answer-tile answer=answer}}
-  {{/each}}
-  {{new-answer question=model saveAnswer="saveAnswer"}}
+    {{/each}}
+    {{new-answer question=model saveAnswer="saveAnswer"}}
+
+  </div>
 </div>
