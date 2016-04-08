@@ -6,7 +6,7 @@
   <hr>
   {{edit-question question=model updateQuestion="updateQuestion"}}
   <hr>
-  {{#each model.answer as |answer|}}
+  {{#each model.answers as |answer|}}
     {{answer-tile answer=answer}}
   {{/each}}
   {{new-answer question=model saveAnswer="saveAnswer"}}
