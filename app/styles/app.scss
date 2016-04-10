@@ -6,16 +6,16 @@
             box-sizing: border-box;
 }
 
-@font-face{
+@font-face {
   font-family : "Veteran";
 
-  src : url('veteran_typewriter.ttf');
-  src : url('veteran_typewriter.ttf') format('truetype');
+  src : url('Italianno-Regular-OTF.otf');
+  src : url('Italianno-Regular-OTF.otf') format('truetype');
 }
 
 body {
   font-family: Veteran;
-  color: gray;
+  color: white;
   font-size: 20px;
   text-shadow: 4px 4px 4px black;
 }

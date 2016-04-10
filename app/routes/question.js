@@ -15,15 +15,16 @@ export default Ember.Route.extend({
       question.save();
     },
 
-  //   deleteQuestion(question) {
-  //    var answerDeletions = question.get('answers').map(function(answer) {
-  //      return answer.destroyRecord();
-  //    });
-  //    Ember.RSVP.all(answerDeletions).then(function() {
-  //      return question.destroyRecord();
-  //    });
-  //    this.transitionTo('index');
-  //  },
+    deleteQuestion(question) {
+      console.log(question);
+     var answerDeletions = question.get('answers').map(function(answer) {
+       return answer.destroyRecord();
+     });
+     Ember.RSVP.all(answerDeletions).then(function() {
+       return question.destroyRecord();
+     });
+     this.transitionTo('index');
+   },
 
     saveAnswer(params) {
       var newAnswer = this.store.createRecord('answer', params);

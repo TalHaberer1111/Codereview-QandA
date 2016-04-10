@@ -5,7 +5,7 @@
   <p>{{model.notes}}</p>
   <!-- <hr> -->
   {{edit-question question=model updateQuestion="updateQuestion"}}
-    <button type="button" class="btn btn-danger" {{action 'deleteQuestion'}}>Delete</button>
+    <button type="button" class="btn btn-danger" {{action 'deleteQuestion' model}}>Delete</button>
   <!-- <hr> -->
   <h1>Answer Vault</h1>
   <div class="answer-results">
