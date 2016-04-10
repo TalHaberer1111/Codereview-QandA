@@ -1,3 +1,34 @@
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+@font-face{
+  font-family : "Veteran";
+
+  src : url('veteran_typewriter.ttf');
+  src : url('veteran_typewriter.ttf') format('truetype');
+}
+
+body {
+  font-family: Veteran;
+  color: gray;
+  font-size: 20px;
+  text-shadow: 4px 4px 4px black;
+}
+
+footer {
+  text-align: center;
+  display: fixed;
+  padding-top: 20px;
+  height: 60px;
+  border-top: 2px solid gray;
+  // background: linear-gradient(#483870, transparent 100%), linear-gradient(0deg, #483870, transparent 100%);
+}
+
 .question-tile {
   text-align: center;
 }
@@ -9,7 +40,7 @@ h1 {
 .Navbar {
   text-align:center;
   margin: 20px;
-  background-color: yellow;
+  // background-color: yellow;
 }
 
 .yeehaw {
@@ -21,10 +52,30 @@ h1 {
   text-align: center;
   display: block;
   margin: 0 auto;
+  border: 4px solid gray;
+  color: gray;
+  text-shadow: 3px 3px 3px black;
+  input {
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+  label {
+    font-size: 25px;
+    font-weight: bold;
+    padding-bottom: 20px;
+  }
+  button {
+    width: 20%;
+    height: 10%;
+    margin-top: 10px;
+  }
 }
 
 video {
   width: 100%;
+  display: relative;
 }
 
 .answer-results {
@@ -33,4 +84,12 @@ video {
 
 body {
   background: linear-gradient(#705151, transparent 100%), linear-gradient(0deg, #705151, transparent 100%);
+}
+
+.hero h1 {
+  display: absolute;
+  top: 200px;
+}
+a {
+  color: white;
 }
